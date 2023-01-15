@@ -6,7 +6,7 @@ from django.utils import timezone
 def one_week_hence():
     return timezone.now() + timezone.timedelta(days=7)
 
-class ToDoList(models.Models):
+class ToDoList(models.Model):
     title = models.CharField(max_length=100, unique=True)
 
     def get_absolute_url(self):
